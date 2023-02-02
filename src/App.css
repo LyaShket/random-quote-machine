@@ -1,38 +1,63 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* white background with infinity grey circles */
+  background: #000;
+  background-size: 100% 100%;
+  animation: bg-zoom-in-out infinite 10s ease-in-out;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes bg-zoom-in-out {
+}
+
+#quote-box {
+  width: 40%;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: #fff;
+  border-radius: 5px;
+  line-height: 1.3;
+}
+
+#text {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+#text:before {
+  content: open-quote;
+  font-weight: 700;
+  margin-right: 6px;
+  line-height: 2rem;
+  font-size: 4rem;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  top: 20px;
+}
+
+#new-quote {
+  /* New Quote button */
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#tweet-quote {
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
